@@ -1,9 +1,0 @@
-#!/bin/bash
-PASTA_DE_MONTAGEM=$HOME/Documentos/Servidor
-IP_DO_SERVIDOR=192.168.0.1
-LISTA_DE_PASTAS=("publico" "sistemas")
-. ./autenticar_usuario_na_rede
-for PASTA in "${LISTA_DE_PASTAS[@]}"; do
-  mkdir -p $PASTA_DE_MONTAGEM/$PASTA
-  sudo mount -t cifs -o username=$USUARIO,password=$SENHA,uid=1000,gid=1000,forceuid,forcegid, //$IP_DO_SERVIDOR/$PASTA$/ $PASTA_DE_MONTAGEM/$PASTA
-done
