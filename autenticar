@@ -1,8 +1,0 @@
-#!/bin/bash
-PASTA_DE_CREDENCIAIS=$HOME/.config/Hidraumak
-mkdir -p $PASTA_DE_CREDENCIAIS
-if [[ ! -e $PASTA_DE_CREDENCIAIS/rede ]]; then
-    echo "1- O arquivo não existe"
-elif [[ ! -d $PASTA_DE_CREDENCIAIS/rede ]]; then
-    echo "2- O arquivo existe"
-fi
