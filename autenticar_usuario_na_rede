@@ -1,0 +1,19 @@
+#!/bin/bash
+PASTA_DE_CREDENCIAIS=$HOME/.config/Hidraumak
+ARQUIVO_DE_CREDENCIAIS=$PASTA_DE_CREDENCIAIS/rede
+mkdir -p $PASTA_DE_CREDENCIAIS
+if [[ ! -e $ARQUIVO_DE_CREDENCIAIS ]]; then
+    echo "Arquivo de credenciais não encontradas"
+    echo "Digite o usuário para conectar a rede:"
+    read USUARIO
+    echo "Digite a senha para conectar a rede:"
+    read SENHA
+    echo "Digite o domínio da rede:"
+    read DOMINIO
+    echo '#!/bin/bash' > $ARQUIVO_DE_CREDENCIAIS
+    echo "USUARIO=$USUARIO" >> $ARQUIVO_DE_CREDENCIAIS
+    echo "SENHA=$SENHA" >> $ARQUIVO_DE_CREDENCIAIS
+    echo "DOMINIO=$DOMINIO" >> $ARQUIVO_DE_CREDENCIAIS
+    echo "Arquivo de credenciais criado!"
+fi
+. $ARQUIVO_DE_CREDENCIAIS
