@@ -1,0 +1,11 @@
+#!/bin/bash
+PASTA_DE_CREDENCIAIS = $HOME/.config/Hidraumak
+PASTA_DE_MONTAGEM = $HOME/Documentos/Servidor
+mkdir -p $PASTA_DE_MONTAGEM
+mkdir -p $PASTA_DE_CREDENCIAIS
+if [! -f $PASTA_DE_CREDENCIAIS/rede]
+then
+  echo "O arquivo existe"
+else
+  echo "O arquivo não existe"
+fi
