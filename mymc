@@ -1,0 +1,2 @@
+#!/bin/bash
+wine "/mnt/Dados/Outros jogos/mymc-alpha-2.7 Memory Card PS2/mymc-gui.exe"
